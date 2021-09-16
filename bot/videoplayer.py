@@ -215,7 +215,7 @@ async def handler(client: PyTgCalls, update: Update):
     await call_py.leave_group_call(chat_id)
 
 
-@Client.on_message(command(["cplay", f"cplay@{Veez.BOT_USERNAME}"]) & filters.group & ~filters.edited)
+@Client.on_message(command(["cvplay", f"cvplay@{Veez.BOT_USERNAME}"]) & filters.group & ~filters.edited)
 @authorized_users_only
 async def chstream(client, m: Message):
     replied = m.reply_to_message
@@ -310,7 +310,7 @@ async def chstream(client, m: Message):
         await m.reply("💭 **please reply to video or video file to stream**")
 
 
-@Client.on_message(command(["cstop", f"cstop@{Veez.BOT_USERNAME}"]) & filters.group & ~filters.edited)
+@Client.on_message(command(["cvstop", f"cvstop@{Veez.BOT_USERNAME}"]) & filters.group & ~filters.edited)
 @authorized_users_only
 async def chstopvideo(client, m: Message):
     chat_id = Veez.CHANNEL
