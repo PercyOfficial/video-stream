@@ -34,7 +34,7 @@ async def clear_raw(_, message: Message):
     else:
         await message.reply_text("❌ **no raw files**")
 
-@Client.on_message(command(["dahlah"]) & ~filters.edited)
+@Client.on_message(command(["damantha"]) & ~filters.edited)
 # edit if u want
 async def haduhh(_, message: Message):
     pth = os.path.realpath(".")
