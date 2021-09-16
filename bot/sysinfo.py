@@ -14,7 +14,7 @@ from helpers.filters import command
 
 # FETCH SYSINFO
 
-@Client.on_message(command(["sysinfo", f"sysinfo@{Veez.BOT_USERNAME}"]) & ~filters.edited)
+@Client.on_message(command(["vsinfo", f"sysinfo@{Veez.BOT_USERNAME}"]) & ~filters.edited)
 @sudo_users_only
 async def give_sysinfo(client, message):
     splatform = platform.system()
