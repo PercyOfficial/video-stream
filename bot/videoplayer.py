@@ -93,7 +93,7 @@ async def startvideo(client, m: Message):
     replied = m.reply_to_message
     if not replied:
         if len(m.command) < 2:
-            await m.reply("💡 **reply to video or provide youtube/live video url to start video streaming**")
+            await m.reply("📻 **reply to video or provide youtube/live video url to start video streaming**")
         else:
             livelink = m.text.split(None, 1)[1]
             chat_id = m.chat.id
@@ -204,7 +204,7 @@ async def stopvideo(client, m: Message):
                 print(e)
                 pass
         await call_py.leave_group_call(chat_id)
-        await m.reply("✅ **successfully left vc !**")
+        await m.reply("🛅 **successfully left vc !**")
     except Exception as e:
         await m.reply(f"🚫 **error** | `{e}`")
 
