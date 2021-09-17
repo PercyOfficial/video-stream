@@ -142,7 +142,7 @@ async def startvideo(client, m: Message):
                 await m.reply_photo(
                     photo="https://telegra.ph/file/a702e6a43cc13336374c0.jpg",
                     reply_markup=keyboard,
-                    caption=f"💡 **video streaming started!**\n\n🏷 **Name:** {title}\n⏱ **Duration:** `{convert_seconds(duration)} m`\n **Requested by** `{(queue[0][1].mention)}` \n\n» **join to video chat on the top to watch the video.**")
+                    caption=f"🎬 **video streaming started!**\n\n🏷 **Name:** {title}\n⏱ **Duration:** `{convert_seconds(duration)} m`\n\n» **join to video chat on the top to watch the video.**")
                 return await msg.delete()
                 await idle()
             except Exception as e:
@@ -181,7 +181,7 @@ async def startvideo(client, m: Message):
             await m.reply_photo(
                 photo="https://telegra.ph/file/bca4f149e798092846230.png",
                 reply_markup=keyboard,
-                caption=f"💡 **video streaming started !**\n\n» **join to video chat on the top to watch the video.**")
+                caption=f"🎬 **video streaming started !**\n\n» **join to video chat on the top to watch the video.**")
             return await msg.delete()
         except Exception as e:
             await msg.edit(f"🚫 **error** | `{e}`")
