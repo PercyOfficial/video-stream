@@ -81,11 +81,11 @@ async def startvideo(client, m: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="•••Support Group•••",
-                        url="https://t.me/Anki_SupportGroup"),
+                        text="••Updates Channel••",
+                        url="https://t.me/AnkiVectorUpdates"),
                     InlineKeyboardButton(
-                        text="•••Updates Channel•••",
-                        url="https://t.me/AnkiVectorUpdates")
+                        text="••Support Group••",
+                        url="https://t.me/AnkiSupport_official")
                 ]
             ]
         )
