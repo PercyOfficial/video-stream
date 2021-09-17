@@ -140,7 +140,7 @@ async def startvideo(client, m: Message):
                     stream_type=StreamType().local_stream,
                 )
                 await m.reply_photo(
-                    photo="https://telegra.ph/file/a702e6a43cc13336374c0.jpg",
+                    photo="https://telegra.ph/file/0f95165698446b9bfcac0.jpg",
                     reply_markup=keyboard,
                     caption=f"🎬 **video streaming started!**\n\n🏷 **Name:** {title}\n⏱ **Duration:** `{convert_seconds(duration)} m`\n\n» **join to video chat on the top to watch the video.**")
                 return await msg.delete()
@@ -152,7 +152,7 @@ async def startvideo(client, m: Message):
         msg = await m.reply("📥 downloading video...")
         video = await client.download_media(m.reply_to_message)
         chat_id = m.chat.id
-        await msg.edit("🔁 **preparing video...**")
+        await msg.edit("🔁 **Processing video...**")
         os.system(f"ffmpeg -i '{video}' -f s16le -ac 1 -ar 48000 'audio{chat_id}.raw' -y -f rawvideo -r 20 -pix_fmt yuv420p -vf scale=640:360 'video{chat_id}.raw' -y")
         try:
             audio_file = f'audio{chat_id}.raw'
