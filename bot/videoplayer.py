@@ -87,7 +87,7 @@ async def startvideo(client, m: Message):
                         text="👥 Support Group",
                         url="https://t.me/slbotzone")
                 ],
-                    [InlineKeyboardButton(text="✪ Help ✪", callback_data="cbguide")],
+                    [InlineKeyboardButton(text="How to use", url="https://t.me/szroseupdates/22")],
                 ]
             ]
         )
