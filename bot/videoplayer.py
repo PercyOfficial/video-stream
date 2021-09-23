@@ -81,11 +81,13 @@ async def startvideo(client, m: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="••Updates Channel••",
-                        url="https://t.me/AnkiVectorUpdates"),
+                        text="🗣 Updates Channel",
+                        url="https://t.me/SL_bot_zone"),
                     InlineKeyboardButton(
-                        text="••Support Group••",
-                        url="https://t.me/AnkiSupport_official")
+                        text="👥 Support Group",
+                        url="https://t.me/slbotzone")
+                ],
+                    [InlineKeyboardButton(text="✪ Help ✪", callback_data="cbguide")],
                 ]
             ]
         )
@@ -93,7 +95,7 @@ async def startvideo(client, m: Message):
     replied = m.reply_to_message
     if not replied:
         if len(m.command) < 2:
-            await m.reply("📻 **reply to video or provide youtube/live video url to start video streaming**")
+            await m.reply("🙋‍**  Give me  video or live stream url or youtube url  to stream the video!\n\n✮✮Use the /vplay command by replying to the video\n\nOr giveing live stream url or youtube url **")
         else:
             livelink = m.text.split(None, 1)[1]
             chat_id = m.chat.id
@@ -140,7 +142,7 @@ async def startvideo(client, m: Message):
                     stream_type=StreamType().local_stream,
                 )
                 await m.reply_photo(
-                    photo="https://telegra.ph/file/0f95165698446b9bfcac0.jpg",
+                    photo="https://telegra.ph/file/ce45bdd5f2e7dc6241c50.mp4",
                     reply_markup=keyboard,
                     caption=f"🎬 **video streaming started!**\n\n🏷 **Name:** {title}\n⏱ **Duration:** `{convert_seconds(duration)} m`\n\n» **join to video chat on the top to watch the video.**")
                 return await msg.delete()
@@ -179,7 +181,7 @@ async def startvideo(client, m: Message):
                 stream_type=StreamType().local_stream,
             )
             await m.reply_photo(
-                photo="https://telegra.ph/file/87565bc398c40986b5382.jpg",
+                photo="https://telegra.ph/file/ce45bdd5f2e7dc6241c50.mp4",
                 reply_markup=keyboard,
                 caption=f"🎬 **video streaming started !**\n\n» **join to video chat on the top to watch the video.**")
             return await msg.delete()
