@@ -32,11 +32,12 @@ async def _human_time_duration(seconds):
                          .format(amount, unit, "" if amount == 1 else "s"))
     return ', '.join(parts)
 
-@Client.on_message(command(["start", f"start@{Veez.BOT_USERNAME}"]))
+
+@Client.on_message(command(["vstart", f"start@{Veez.BOT_USERNAME}"]))
 async def start(_, m: Message):
     if m.chat.type == "private":
         await m.reply_text(
-            f"✨ **Hello there, I am a telegram group video streaming bot.**\n\n💭 **I was created to stream videos in group "
+            f"✨ **Hello there, I am ʜᴇʀᴍɪᴏɴᴇ, a telegram group video streaming bot.**\n\n💭 **I was created to stream videos in group "
             f"video chats easily.**\n\n❔ **To find out how to use me, please press the help button below** 👇🏻",
             reply_markup=InlineKeyboardMarkup(
                 [[
@@ -44,21 +45,20 @@ async def start(_, m: Message):
                         "➕ Add me to your Group ➕", url=f"https://t.me/{Veez.BOT_USERNAME}?startgroup=true")
                 ], [
                     InlineKeyboardButton(
-                        "❔ HOW TO USE THIS BOT", callback_data="cbguide")
+                        "❓ Help", callback_data="cbguide"),
+                    InlineKeyboardButton(
+                        "❗ All Commands", callback_data="cblist")
                 ], [
                     InlineKeyboardButton(
-                        "🌐 Terms & Condition", callback_data="cbinfo")
+                        "♨ Terms & Condition", callback_data="cbinfo")
                 ], [
                     InlineKeyboardButton(
-                        "💬 Group", url="https://t.me/VeezSupportGroup"),
+                        "🎭 Support", url="https://t.me/HermioneSupport_Official"),
                     InlineKeyboardButton(
-                        "📣 Channel", url="https://t.me/levinachannel")
+                        "📲 Channel", url="https://t.me/Hermione_Updates")
                 ], [
                     InlineKeyboardButton(
                         "👩🏻‍💻 Developer", url="https://t.me/dlwrml")
-                ], [
-                    InlineKeyboardButton(
-                        "📚 All Command List", callback_data="cblist")
                 ]]
             ))
     else:
@@ -66,13 +66,11 @@ async def start(_, m: Message):
                            reply_markup=InlineKeyboardMarkup(
                                [[
                                    InlineKeyboardButton(
-                                       "❔ HOW TO USE THIS BOT", callback_data="cbguide")
+                                       "❓ HOW TO USE THIS BOT", callback_data="cbguide")
+                               
                                ], [
                                    InlineKeyboardButton(
-                                       "🌐 Search Youtube", switch_inline_query='')
-                               ], [
-                                   InlineKeyboardButton(
-                                       "📚 Command List", callback_data="cblist")
+                                       "❗ Command List", callback_data="cblist")
                                ]]
                            )
                            )
