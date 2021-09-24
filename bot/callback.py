@@ -16,11 +16,13 @@ async def cbguide(_, query: CallbackQuery):
 3.) add @{Veez.ASSISTANT_NAME } to your group.
 4.) turn on the voice chat first before start to stream video.
 5.) type /vplay (reply to video) to start streaming.
+6.) type /vplay <streaming link> to syart streaming like youtube or other
+    Eg: `/vplay https:youtube.com`
 6.) type /vstop to end the video streaming.
 
 📝 **note: stream & stop command can only be executed by group admin only!**
 
-⚡ __Maintained by Veez Project Team__""",
+🎭 __Maintained by Hermione Dev Team__""",
         reply_markup=InlineKeyboardMarkup(
             [[
                 InlineKeyboardButton(
@@ -32,7 +34,7 @@ async def cbguide(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"✨ **Hello there, I am a telegram group video streaming bot.**\n\n💭 **I was created to stream videos in group "
+        f"✨ **Hello there, I am ʜᴇʀᴍɪᴏɴᴇ a telegram group video streaming bot.**\n\n💭 **I was created to stream videos in group "
         f"video chats easily.**\n\n❔ **To find out how to use me, please press the help button below** 👇🏻",
         reply_markup=InlineKeyboardMarkup(
             [[
@@ -40,21 +42,20 @@ async def cbstart(_, query: CallbackQuery):
                     "➕ Add me to your Group ➕", url=f"https://t.me/{Veez.BOT_USERNAME}?startgroup=true")
             ], [
                 InlineKeyboardButton(
-                    "❔ HOW TO USE THIS BOT", callback_data="cbguide")
+                    "❓ Help", callback_data="cbguide"),
+                InlineKeyboardButton(
+                    "❗All Commands", callback_data="cblist")
             ], [
                 InlineKeyboardButton(
-                    "🌐 Terms & Condition", callback_data="cbinfo")
+                    "⚜ Terms & Condition", callback_data="cbinfo")
             ], [
                 InlineKeyboardButton(
-                    "💬 Group", url=f"https://t.me/{Veez.GROUP_NAME}"),
+                    "🎭 Support", url="https://t.me/VeezSupportGroup"),
                 InlineKeyboardButton(
-                    "📣 Channel", url=f"https://t.me/{Veez.CHANNEL_NAME}")
+                    "📲 Channel", url="https://t.me/levinachannel")
             ], [
                 InlineKeyboardButton(
-                    "🧙🏻‍♂️ Owner", url=f"https://t.me/{Veez.OWNER_NAME}")
-            ], [
-                InlineKeyboardButton(
-                    "📚 All Command List", callback_data="cblist")
+                    "👩🏻‍💻 Developer", url="https://t.me/rodolphus_lestrang")
             ]]
         ))
 
@@ -71,11 +72,11 @@ Client Library and Framework in Pure Python for Users and Bots.__
 
 👨🏻‍💻 __Thanks to the developers who participated in the development of this bot, the list of devs can be seen below:__
 
-👩🏻‍✈️ » [Levina Shavila](https://github.com/levina-lab)
-🤵🏻 » [Sammy-XD](https://github.com/Sammy-XD)
-🤵🏻 » [Zxce3](https://github.com/Zxce3)
-🤵🏻 » [Tofik Denianto](https://github.com/tofikdn)
-🤵🏻 » [Shohih Abdul](https://github.com/DoellBarr)
+👨‍✈️ » [ᴍᴀᴛʜᴇᴇꜱʜᴀ](https://t.me/rodolphus_lestrang)
+🤵🏻 » [ᴅᴀᴍᴀɴᴛʜᴀ](https://t.me/MrItzme)
+🤵🏻 » [ꜱᴀᴅᴇᴡ](https://t.me/Darkridersslk)
+🤵🏻 » [ᴠᴏʟᴅʏ](https://t.me/Iron_Voldy)
+🤵🏻 » [ꜱᴀᴛʜꜱᴀʀᴀ](https://t.me/Boy_alone_in_universe)
 
 __This bot licensed under GNU-GPL 3.0 License__""",
         reply_markup=InlineKeyboardMarkup(
@@ -100,12 +101,11 @@ async def cblist(_, query: CallbackQuery):
 » /lyric (song name) - lyric scrapper
 » /vjoin - invite assistant join to your group
 » /vleave - order assistant leave from your group
-» /startvc - start video chat in your group
 
 🎊 FUN CMD:
 
-» /asupan - check it by yourself
-» /chika - check it by yourself
+» /asupan - 🤐
+» /chika - 🤐
 » /wibu - check it by yourself
 » /truth - check it by yourself
 » /dare - check it by yourself
@@ -119,12 +119,12 @@ async def cblist(_, query: CallbackQuery):
 » /sysinfo - check bot system information
 
 💡 SUDO ONLY:
-
+*Only For Bot Owner*
 » /rmd - remove all downloaded files
 » /rmw - remove all downloaded raw files
 » /leaveall - order assistant leave from all group
 
-⚡ __Maintained by Veez Project Team__""",
+⚡ __Maintained by ʜᴇʀᴍɪᴏɴᴇ ᴅᴇᴠ ᴛᴇᴀᴍ__""",
         reply_markup=InlineKeyboardMarkup(
             [[
                 InlineKeyboardButton(
