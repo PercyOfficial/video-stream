@@ -32,7 +32,6 @@ async def _human_time_duration(seconds):
                          .format(amount, unit, "" if amount == 1 else "s"))
     return ', '.join(parts)
 
-
 @Client.on_message(command(["start", f"start@{Veez.BOT_USERNAME}"]))
 async def start(_, m: Message):
     if m.chat.type == "private":
