@@ -86,9 +86,10 @@ async def startvideo(client, m: Message):
                     InlineKeyboardButton(
                         text="👥 Support Group",
                         url="https://t.me/slbotzone")  
+               ]
             ]
-        )
-    
+         ) 
+                
     replied = m.reply_to_message
     if not replied:
         if len(m.command) < 2:
