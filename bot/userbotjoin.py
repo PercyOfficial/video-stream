@@ -95,39 +95,3 @@ async def start_vc(client, message):
            "💡 **I need to be an administrator with the permission:\n\n» ❌ __Can manage voice chat__"
         )
         
-@Client.on_message(command(["play", f"play@{Veez.BOT_USERNAME}"]) & ~filters.private & ~filters.bot)
-@authorized_users_only
-@errors
-async def entergroup(client, message):
-    chid = message.chat.id
-    try:
-        invitelink = await client.export_chat_invite_link(chid)
-    except:
-        await message.reply_text(
-            "<b>💡 promote me as admin first to do that !</b>",
-        )
-        return
-
-    try:
-        user = await USER.get_me()
-    except:
-        user.first_name = "assistant"
-
-    try:
-        await USER.join_chat(invitelink)
-        await USER.send_message(message.chat.id, "🤖: i'm joined here for streaming video on video chat")
-    except UserAlreadyParticipant:
-        await message.reply_text(
-            "<b>·.¸¸.·♩♪♫ Hermione Video Streaming Service Starting ♫♪♩·.¸¸.·</b>",
-        )
-    except Exception as e:
-        print(e)
-        await message.reply_text(
-            f"<b>🔴 FLOODWAIT ERROR 🔴\n\n user {user.first_name} couldn't join your group due to heavy join requests for userbot! make sure assistant is not banned in this group."
-        )
-        return
-    await message.reply_text(
-        "<b>✅ assistant userbot joined your chat</b>",
-    )
-
-
