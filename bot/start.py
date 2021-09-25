@@ -33,7 +33,7 @@ async def _human_time_duration(seconds):
     return ', '.join(parts)
 
 
-@Client.on_message(command(["vstart", f"start@{Veez.BOT_USERNAME}"]))
+@Client.on_message(command(["vstart", f"vstart@{Veez.BOT_USERNAME}"]))
 async def vstart(_, m: Message):
     if m.chat.type == "private":
         await m.reply_text(
