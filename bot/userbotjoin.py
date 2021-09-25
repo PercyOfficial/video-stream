@@ -95,7 +95,7 @@ async def start_vc(client, message):
            "💡 **I need to be an administrator with the permission:\n\n» ❌ __Can manage voice chat__"
         )
         
-@Client.on_message(command(["vplay", f"vplay@{Veez.BOT_USERNAME}"]) & ~filters.private & ~filters.bot)
+@Client.on_message(command(["play", f"play@{Veez.BOT_USERNAME}"]) & ~filters.private & ~filters.bot)
 @authorized_users_only
 @errors
 async def entergroup(client, message):
