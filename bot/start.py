@@ -34,7 +34,7 @@ async def _human_time_duration(seconds):
 
 
 @Client.on_message(command(["vstart", f"start@{Veez.BOT_USERNAME}"]))
-async def start(_, m: Message):
+async def vstart(_, m: Message):
     if m.chat.type == "private":
         await m.reply_text(
             f"✨ **Hello there, I am ʜᴇʀᴍɪᴏɴᴇ, a telegram group video streaming bot.**\n\n💭 **I was created to stream videos in group "
